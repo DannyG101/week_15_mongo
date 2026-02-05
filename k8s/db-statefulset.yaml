@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: mongo
-          image: mongo:latest
+          image: docker.io/bitnami/mongodb:latest
           ports:
             - containerPort: 27017
           env:
@@ -25,7 +25,7 @@ spec:
               value: mypassword
           volumeMounts:
             - name: mongo-data
-              mountPath: /data/db
+              mountPath: /bitnami/mongodb
   volumeClaimTemplates:
     - metadata:
         name: mongo-data
