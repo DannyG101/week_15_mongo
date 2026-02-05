@@ -50,7 +50,7 @@ def get_employees_by_lastname_and_age():
 
 
 
-uvicorn.run(app)
+print(dal.get_employees_by_lastname_and_age(db.coll))
 
 
 

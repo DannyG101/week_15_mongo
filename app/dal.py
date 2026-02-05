@@ -28,6 +28,6 @@ def get_managers_excluding_departments(collection):
 
 
 def get_employees_by_lastname_and_age(collection):
-    results = ["This is where you want me to remember syntax from yesterday without being able to look on the internet lol"]
+    results = list(collection.find({"name": {"$regex": "(Wright|Nelson)$"}, "age": {"$lt": 35}}))
     return results
 
